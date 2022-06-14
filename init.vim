@@ -36,6 +36,7 @@ inoremap kj <esc>
 noremap <C-w> :bd<CR>
 map <C-J> :bprev<CR>
 map <C-K> :bnext<CR>
+map <S-J> :Format<CR>
 autocmd FileType python map <buffer> <F9> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 nnoremap <CR> :noh<CR><CR>
@@ -306,6 +307,8 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+let g:coc_global_extensions = ['coc-rome', 'coc-tsserver', 'coc-pyright', 'coc-css','coc-emmet', 'coc-html', 'coc-html-css-support', 'coc-tailwindcss']
 
 
 " ===============================================================================================================
